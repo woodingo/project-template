@@ -1,9 +1,9 @@
-header.candidate
+header.candidate.content-block
   .row
-    .small-8.medium-3.large-2.columns
-      picture
-        img(src="images/photo@1x.jpg")
-    .small-8.medium-3.large-6.columns
+    .small-8.medium-2.columns
+      picture.candidate-photo
+        img(srcset="images/photo@1x.jpg 1x, images/photo@2x.jpg 2x" src="images/photo@1x.jpg" alt="Лысый и великолепный")
+    .small-8.medium-6.columns
       label
         input(type="text" placeholder="Имя")
       label
@@ -12,5 +12,5 @@ header.candidate
         input(type="text" placeholder="Город")
       label
         input(type="text" placeholder="Контактные данные")
-  picture.approved
-    img(src="images/stamp@1x.png")
+  picture.candidate-approved
+    img(srcset="images/stamp@1x.png 1x, images/stamp@2x.png 2x" src="images/stamp@1x.png" alt="Пдыщь")

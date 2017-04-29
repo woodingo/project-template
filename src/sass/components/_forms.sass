@@ -1,0 +1,63 @@
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='email'],
+[type='number']
+  appearance: none
+  padding: rem-calc(map-get($grid-column-gutter, small)) 0
+  margin:
+    bottom: rem-calc(26)
+  height: rem-calc(30)
+  border:
+    bottom: rem-calc(2) solid $black
+  +form-typo
+
+  &:focus
+    border:
+      bottom: 2px solid
+      color: $color-blue
+
+.checkbox
+  display: flex
+  cursor: pointer
+  padding: 
+    top: rem-calc(map-get($grid-column-gutter, small))
+    bottom: rem-calc(map-get($grid-column-gutter, small))
+  margin:
+    bottom:  rem-calc(map-get($grid-column-gutter, medium))
+  align-items: center
+  +form-typo
+
+  input[type='checkbox']
+    display: none
+
+    &:checked
+      & + i
+        background: 
+          color: $color-blue
+        svg
+          opacity: 1
+          transform: scale(1)
+
+  i
+    content: ''
+    display: flex
+    width: rem-calc(19)
+    height: rem-calc(19)
+    margin:
+      right: rem-calc(8)
+    border:
+      radius: rem-calc(5)
+    background:
+      color: $color-gray
+    justify-content: center
+    align-items: center
+    transition: background 0.3s ease-out 0s
+
+    svg
+      stroke: white
+        width: rem-calc(2)
+      fill: none
+      opacity: 0
+      transform: scale(0.5)
+      transition: all 0.3s ease-out 0s

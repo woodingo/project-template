@@ -1,7 +1,11 @@
-section.skills
-  h2 Навыки
-  .row
+section.skills.content-block
+  .row.skills-row
+    .small-8.columns
+      h2 Навыки
+  .row.skills-row
     each label in ['Html5', 'SASS', 'Vanilla JS', 'git', 'CSS3', 'Less', 'Angular', 'Foundation', 'БЭМ', 'Gulp', 'JQuery', 'Bootstrap']
-      label.small-8.medium-2.columns
+      label.small-8.medium-2.columns.checkbox
         input(type="checkbox" value=label)
+        i
+          +svg('check')
         =label

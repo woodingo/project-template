@@ -1,20 +1,18 @@
 *
   box-sizing: border-box
 
+body
+  background: 
+    color: $color-gray
+
 .icon
   display: inline-block
   vertical-align: middle
-
-[type='text'],
-[type='search'],
-[type='tel'],
-[type='email'],
-[type='number']
-  appearance: none
-
+  height: 1em
+  width: 1em
 
 .site-container
-  margin: 0 auto
+  margin: rem-calc(60) auto
   padding:
     left: rem-calc(map-get($grid-column-gutter, small))
     right: rem-calc(map-get($grid-column-gutter, small))
@@ -24,7 +22,28 @@
       left: rem-calc(map-get($grid-column-gutter, medium)) / 2
       right: rem-calc(map-get($grid-column-gutter, medium)) / 2
 
-
 .container
   margin: 0 auto
   max-width: $global-width
+
+.content-block
+  background: 
+    color: white
+    image: url(../images/bg@1x.png)
+  @media #{$retina}
+    background:
+      image: url(../images/bg@2x.png)
+  margin:
+    bottom: rem-calc(2)
+  padding:
+    top: rem-calc(map-get($grid-column-gutter, medium))
+    bottom: rem-calc(map-get($grid-column-gutter, small))*0.5
+    left: rem-calc(map-get($grid-column-gutter, small))
+    right: rem-calc(map-get($grid-column-gutter, small))
+
+section
+
+h2
+  margin: 
+    top: rem-calc(map-get($grid-column-gutter, small))
+    bottom: rem-calc(map-get($grid-column-gutter, small))
