@@ -1,6 +1,6 @@
 'use strict'
 
-$(document).ready(function() {
+$(function() {
 
   // Если в проекте используются встроенные js-плагины от Foundation, разкомментировать
   // $(document).foundation();
@@ -13,24 +13,42 @@ $(document).ready(function() {
   var angle = 0;
   var skillLevel = 0;
 
-  skills.forEach(function(element) {
+  console.log(skills);
+
+  // skills.forEach(function(element) {
+  //   if (element.dataset.js === "") {
+  //     skillsJs.push(element);
+  //   };
+  // });
+
+  for (var i = 0; i < skills.length; i++) {
+    var element = skills[i];
     if (element.dataset.js === "") {
       skillsJs.push(element);
     };
-  });
+  }
 
   var angleStep = 180 / skillsJs.length;
   var skillStep = Math.round(1000 / skillsJs.length);
 
-  skillsJs.forEach(function(element) {
+  // skillsJs.forEach(function(element) {
+  //   element.addEventListener("click", changeLevel, false)
+  //   if (element.checked) {
+  //     angle = angle + angleStep;
+  //     skillLevel = skillLevel + skillStep;
+  //   }
+  // });
+
+  for (var i = 0; i < skillsJs.length; i++) {
+    var element = skillsJs[i];
     element.addEventListener("click", changeLevel, false)
     if (element.checked) {
       angle = angle + angleStep;
       skillLevel = skillLevel + skillStep;
     }
-  });
+  }
 
-  arrow.style.transform = `rotate(${angle}deg)`;
+  arrow.style.transform = 'rotate(' + angle + 'deg)';
   skillLevelContainer.innerHTML = skillLevel;
 
   if (skillLevel > 500) {
@@ -91,6 +109,6 @@ $(document).ready(function() {
       }, 10);
     }
 
-    arrow.style.transform = `rotate(${angle}deg)`;
+    arrow.style.transform = 'rotate(' + angle + 'deg)';
   }
 });

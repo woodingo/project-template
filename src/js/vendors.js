@@ -35,4 +35,5 @@
 // ../../bower_components/foundation-sites/dist/js/plugins/foundation.tooltip.js
 
 // Other vendor
-//= ../../bower_components/promise-polyfill/promise.min.js
+// ../../bower_components/promise-polyfill/promise.min.js
+//= jquery.documentReady.js
