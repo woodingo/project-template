@@ -19,3 +19,11 @@
     position: absolute
     right: rem-calc(2)
     bottom: rem-calc(10)
+    opacity: 0
+    transform: scale(1.5)
+    transition: all 0.3s ease-out 0s
+
+    &.true
+      opacity: 1
+      transform: scale(1)
+      transition: all 0.3s ease-out 0s

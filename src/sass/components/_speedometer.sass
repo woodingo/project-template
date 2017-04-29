@@ -2,6 +2,10 @@
   padding:
     top: rem-calc(map-get($grid-column-gutter, small))*5
     bottom: rem-calc(map-get($grid-column-gutter, small))*5
+  +breakpoint(medium)
+    text-align: left
+  +breakpoint(small)
+    text-align: center
 
   &-graph
     max-width: rem-calc(255)
@@ -17,6 +21,8 @@
 
 .arrow
   fill: $black
+  transform-origin: 85% 49%
+  transition: transform .5s ease-out 0s
 
 .skill-level
   color: $color-blue

@@ -1,11 +1,75 @@
+- 
+  var items = [
+    {
+      name: 'Html5',
+      value: true,
+      js: false
+    },
+    {
+      name: 'SASS',
+      value: true,
+      js: false
+    },
+    {
+      name: 'Vanilla JS',
+      value: true,
+      js: true
+    },
+    {
+      name: 'git',
+      value: true,
+      js: false
+    },
+    {
+      name: 'CSS3',
+      value: true,
+      js: false
+    },
+    {
+      name: 'Less',
+      value: true,
+      js: false
+    },
+    {
+      name: 'Angular JS',
+      value: true,
+      js: true
+    },
+    {
+      name: 'Foundation',
+      value: false,
+      js: true
+    },
+    {
+      name: 'БЭМ',
+      value: true,
+      js: false
+    },
+    {
+      name: 'Gulp',
+      value: true,
+      js: true
+    },
+    {
+      name: 'JQuery',
+      value: false,
+      js: true
+    },
+    {
+      name: 'Bootstrap',
+      value: true,
+      js: true
+    },
+  ]
+
 section.skills.content-block
   .row.skills-row
     .small-8.columns
       h2 Навыки
   .row.skills-row
-    each label in ['Html5', 'SASS', 'Vanilla JS', 'git', 'CSS3', 'Less', 'Angular', 'Foundation', 'БЭМ', 'Gulp', 'JQuery', 'Bootstrap']
-      label.small-8.medium-2.columns.checkbox
-        input(type="checkbox" value=label)
+    each item, index in items
+      label.small-4.medium-2.columns.checkbox
+        input(type="checkbox" value=item.name checked=item.value data-js=item.js)
         i
           +svg('check')
-        =label
+        =item.name
