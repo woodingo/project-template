@@ -3,5 +3,6 @@
 .git
 bower_components
 node_modules
+build
 /.sass-cache
 psd
