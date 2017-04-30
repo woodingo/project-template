@@ -6,7 +6,7 @@ $(function() {
   // $(document).foundation();
 
   var skills = document.querySelectorAll('.checkbox input');
-  var arrow = document.querySelector('.speedometer-graph .arrow');
+  var arrow = document.querySelector('.speedometer-graph .speedometer-arrow');
   var skillLevelContainer = document.querySelector('#skill-level');
   var approved = document.querySelector('#candidate-approved');
   var skillsJs = [];

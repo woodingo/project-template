@@ -8,7 +8,32 @@
     text-align: center
 
   &-graph
+    position: relative
+    width: 100%
     max-width: rem-calc(255)
+
+    &:after
+      content: ''
+      display: block
+      padding:
+        bottom: 52%
+
+  &-sectors
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+
+  &-arrow
+    position: absolute
+    width: 25%
+    height: 48%
+    bottom: -20%
+    left: 31%
+    fill: $black
+    transform-origin: 85% 49%
+    transition: transform .5s ease-out 0s
 
 .level-1
   fill: $color-yellow
@@ -18,11 +43,6 @@
 
 .level-3
   fill: $color-blue
-
-.arrow
-  fill: $black
-  transform-origin: 85% 49%
-  transition: transform .5s ease-out 0s
 
 .skill-level
   color: $color-blue
